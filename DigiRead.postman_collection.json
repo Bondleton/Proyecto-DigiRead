@@ -1,0 +1,67 @@
+{
+	"info": {
+		"_postman_id": "dffea07e-cb66-4200-9f8e-c8fd288c0cf7",
+		"name": "DigiRead",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32403530"
+	},
+	"item": [
+		{
+			"name": "Webhook - Notificación",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"titulo\": \"Revista Ciencia Hoy - Mayo 2025\",\r\n  \"tipo\": \"revista\",\r\n  \"fecha_publicacion\": \"2025-05-01\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/nuevo-titulo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"nuevo-titulo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Webhook - Notificación Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"titulo\": \"Revista Ciencia Hoy - Mayo 2025\",\r\n  \"tipo\": \"revista\",\r\n  \"fecha_publicacion\": \"2025-05-01\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/webhook/nuevo-titulo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"webhook",
+						"nuevo-titulo"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
