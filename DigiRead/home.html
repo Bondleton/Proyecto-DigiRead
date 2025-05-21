@@ -18,45 +18,46 @@
 <body>
   <!-- Barra de navegación -->
 
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container py-3">
-      <a class="navbar-brand" href="home.html">
-        <img src="Img/Logo5.png" alt="DigiRead" class="logo-image">
-      </a>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container py-3">
+            <a class="navbar-brand" href="home.html">
+                <img src="Img/Logo5.png" alt="DigiRead" class="logo-image">
+            </a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto align-items-center"> <!-- Añade align-items-center aquí -->
-          <li class="nav-item">
-            <a class="nav-link active" href="home.html">
-              <i class="fas fa-home category-icon-nav"></i>
-            </a>
-          </li>
-          <li class="nav-item position-relative">
-            <a class="nav-link" href="#">
-              <i class="fas fa-bell"></i>
-            </a>
-          </li>
-          <li class="nav-item search-bar d-flex align-items-center">
-            <a class="nav-link" href="buscar.html">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </a>
-            <!-- <div class="position-relative">
-              <input class="form-control ps-4" type="search" placeholder="Buscar contenido..." aria-label="Search">
-            </div> -->
-          </li>
-          <li class="nav-item ms-2 d-flex align-items-center"> <!-- Añade d-flex y align-items-center -->
-            <button class="btn btn-outline-secondary" onclick="logout()">
-              <i class="fas fa-sign-out-alt"></i> Cerrar sesión
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
             </button>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">
+                            <i class="fas fa-home"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item position-relative">
+                        <a class="nav-link active" href="notificaciones.html">
+                            <i class="fas fa-bell"></i>
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                3
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="buscar.html">
+                            <i class="fas fa-search"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <button class="btn btn-outline-secondary" onclick="logout()">
+                            <i class="fas fa-sign-out-alt"></i> Cerrar sesión
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
   <!-- Contenido principal -->
   <main class="container my-5">

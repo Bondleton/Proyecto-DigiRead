@@ -35,12 +35,16 @@
                         </a>
                     </li>
                     <li class="nav-item position-relative">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link active" href="notificaciones.html">
                             <i class="fas fa-bell"></i>
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                3
+                            </span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="search.html">
+                        <a class="nav-link" href="buscar.html">
                             <i class="fas fa-search"></i>
                         </a>
                     </li>
@@ -222,7 +226,7 @@
             resultElement.querySelector('.publisher').textContent = "Editorial: " + item.publisher;
             resultElement.querySelector('.isbn-badge').textContent = "ISBN: " + item.isbn;
             resultElement.querySelector('.category-badge').textContent = item.category;
-            
+
 
             // Configurar botón de leer
             resultElement.querySelector('.read-button').addEventListener('click', function () {
