@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DigiRead | Login</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sen&display=swap" rel="stylesheet">
-    <!-- Firebase -->
+    <!-- Firebase SDK -->
     <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
-    <script src="firebase-config.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script> -->
 </head>
 
 <body>
@@ -36,13 +36,15 @@
                 </header>
 
                 <div class="welcome-section">
-                    <h1>Bienvenido a DigiRead</h1>                    
+                    <h1>Bienvenido a DigiRead</h1>
                 </div>
 
                 <form id="loginForm" class="login-form">
                     <div class="form-group">
                         <label for="username">Correo electrónico</label>
-                        <input type="text" id="username" placeholder="Ingresa tu correo electrónico" required>
+                        <!-- <input type="text" id="username" placeholder="Ingresa tu correo electrónico" required> -->
+                        <input type="email" id="username" placeholder="Ingresa tu correo electrónico" required>
+
                     </div>
 
                     <div class="form-group">
@@ -59,44 +61,22 @@
                     </div>
 
                     <button type="submit" class="login-btn">Iniciar sesión</button>
+
                 </form>
+
+                <!-- <p id="mensaje"></p> -->
 
                 <footer>
                     <p>Equipo burbuja ©</p>
                 </footer>
+
+                <div id="login-message" style="margin-top: 10px;"></div>
             </div>
         </div>
     </div>
-
-
-
-    </div>
-
-
-    <script>
-        const loginForm = document.getElementById('login-form');
-        const message = document.getElementById('login-message');
-
-        loginForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-
-            firebase.auth().signInWithEmailAndPassword(email, password)
-                .then((userCredential) => {
-                    message.style.color = 'green';
-                    message.textContent = 'Inicio de sesión exitoso. Redirigiendo...';
-                    // Redirigir o mostrar contenido
-                    setTimeout(() => {
-                        window.location.href = "home.html"; // o dashboard.html
-                    }, 1500);
-                })
-                .catch((error) => {
-                    message.style.color = 'red';
-                    message.textContent = 'Error: ' + error.message;
-                });
-        });
-    </script>
+    <!-- Configuración y lógica -->
+    <script src="js/firebase-config.js"></script>
+    <script src="js/login.js"></script>
 </body>
 
 </html>
